@@ -1,0 +1,41 @@
+.b{
+    border: 3px solid rgb(50, 126, 158);
+    margin-bottom: 20px;
+    border-radius: 25px
+}
+
+input{
+    margin-top: 30px;
+    width: 75%;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(50, 126, 158);
+    padding: 0.6em;
+}
+
+input:hover{
+    transform: scale(1.1);
+    transition: 250ms linear;
+
+}
+
+button{
+    color: white;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(50, 126, 158);
+    border-radius: 20px;
+    border: none;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+h1{
+    color:  rgb(50, 126, 158);
+}
+
+button:hover{
+    background-color: white;
+    color: rgb(50, 126, 158);
+    border: 2px solid rgb(50, 126, 158);;
+}

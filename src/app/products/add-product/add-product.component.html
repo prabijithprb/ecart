@@ -1,0 +1,26 @@
+
+
+<div class="container text-center mt-5 ">
+
+    <h1>Add New Product</h1>
+
+</div>
+
+<div class="container w-75 b">
+    <form (ngSubmit)="addProduct()" [formGroup]="addProductForm" action=""  class="container text-center">
+        <input type="text" formControlName="id" placeholder="Product ID" name="id" id="id"><br>
+        <input type="text" formControlName="productName" placeholder="Product Name" name="productName" id="productName"><br>
+        <input type="text" formControlName="categoryId" placeholder="Category" name="Category" id="Category"><br>
+        <input type="text" formControlName="price" placeholder="Price" name="price" id="price"><br>
+        <input type="text" formControlName="productImage" placeholder="Product Image" name="image" id="image"><br>
+        <input type="text" formControlName="description" placeholder="Description" name="des" id="des"><br>
+        <input type="text" formControlName="isAvailable" placeholder="Availability" name="Availability" id="Availability"><br>
+        <input type="text" formControlName="rating" placeholder="Rating" name="rating" id="rating"><br>
+        <input type="text" formControlName="review" placeholder="Reviews" name="review" id="review"><br>
+        <input type="text" formControlName="vendorName" placeholder="Vendor" name="Vendor" id="Vendor"><br>
+        <input type="text" formControlName="warranty" placeholder="Warranty" name="warrenty" id="warrenty"><br>
+
+        <button>ADD</button>
+    </form>
+
+</div>

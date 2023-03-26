@@ -1,0 +1,80 @@
+<div class="container ">
+    <div class="container row text-center bg-warning">
+        <div class="p-4 col-3 c">
+
+
+            <a (click)="filter('')">
+                <img style="height: 150px;width: 75%;" class="w-100 rounded-circle"
+                    src="https://i.postimg.cc/J0243ZFv/shutterstock-1032332713.jpg" alt="...">
+                <h4 class="pt-2">view all</h4>
+
+            </a>
+        </div>
+
+        <div class="p-4 col-3 c">
+            <a (click)="filter('3')">
+                <img style="height: 150px;width: 75%;" class="w-100 rounded-circle"
+                    src="https://i.postimg.cc/L5JZpRcG/istockphoto-1445363287-170667a.jpg" alt="...">
+                <h4 class="pt-2">gears</h4>
+
+            </a>
+        </div>
+
+
+        <div class="p-4 col-3 c">
+            <a (click)="filter('2')">
+                <img style="height: 150px;width: 75%;" class="w-100 rounded-circle"
+                    src="https://i.postimg.cc/g2HHzVtp/61-DP-O3qxr-L-SY445-SX342-QL70-ML2.jpg" alt="...">
+                <h4 class="pt-2">sportswear</h4>
+
+            </a>
+        </div>
+
+
+        <div class="p-4 col-3 c">
+            <a (click)="filter('1')">
+
+                <img style="height: 150px;width: 75%;" class="w-100 rounded-circle"
+                    src="https://i.postimg.cc/KvMW8bf7/photo-1542291026-7eec264c27ff.jpg" alt="...">
+                <h4 class="pt-2">shoes</h4>
+            </a>
+
+
+        </div>
+
+        <button type="button" class="btn btn-primary btn-lg w-100">view all</button>
+    </div>
+
+
+
+
+
+    <!-- Section-->
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 mt-5">
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                <div *ngFor=" let i of filterProducts | filter:searchKey:'productName'" class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img src="{{i.productImage}}" alt="">
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">{{i.productName}}</h5>
+                                <!-- Product price-->
+                                {{i.price}}
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                    routerLink="view_product/{{i.id}}">View
+                                    options</a>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
